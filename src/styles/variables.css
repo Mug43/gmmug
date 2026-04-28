@@ -1,0 +1,70 @@
+/* ===== 全局设计令牌 ===== */
+:root {
+  /* 品牌色 — 源自原站 #227982 青绿色系 */
+  --color-primary: #227982;
+  --color-primary-light: #30c1be;
+  --color-primary-lighter: #45b4c1;
+  --color-primary-dark: #1e5d63;
+  --color-primary-bg: rgba(34, 121, 130, 0.08);
+  --color-primary-bg-deep: rgba(69, 180, 193, 0.2);
+
+  /* 中性色 */
+  --color-text: #333333;
+  --color-text-secondary: #666666;
+  --color-text-muted: #999999;
+  --color-bg: #f4f4f4;
+  --color-bg-white: #ffffff;
+  --color-bg-card: #f9f9f9;
+  --color-border: #ddd;
+  --color-border-light: #eee;
+
+  /* 功能色 */
+  --color-success: #67c23a;
+  --color-warning: #e6a23c;
+  --color-danger: #f56c6c;
+  --color-info: #909399;
+  --color-link: #da7878;
+  --color-star: #ffcc00;
+
+  /* 特征阴影 — 原站标志性青色投影 */
+  --shadow-brand: 0 4px 16px rgba(70, 217, 219, 0.35);
+
+  /* 间距 */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+
+  /* 圆角 */
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-round: 50%;
+
+  /* 阴影 */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+  /* 过渡 */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* 布局 */
+  --navbar-height: 56px;
+  --sidebar-width: 220px;
+  --content-max-width: 1200px;
+
+  /* 字体 */
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans SC', sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 32px;
+}
