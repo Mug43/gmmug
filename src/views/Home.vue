@@ -39,7 +39,7 @@
     <section class="daily-section">
       <h2><i class="fa fa-calendar"></i> 每日一图</h2>
       <div class="daily-card">
-        <img v-if="dailyImage" :src="dailyImage" alt="每日一图" @error="dailyImage = ''" />
+        <img v-if="dailyImage" :src="dailyImage" alt="每日一图" @error="handleImageError" />
         <div v-else class="daily-placeholder">
           <i class="fa fa-image"></i>
           <p>今日图片加载中...</p>
@@ -56,11 +56,22 @@ import { ref, onMounted } from 'vue'
 import AppFooter from '@/components/common/AppFooter.vue'
 
 const titleChars = 'GMMUG'.split('')
+const dailySources = [
+  'https://bing.biturl.top/?resolution=1920&format=image&index=0&mkt=zh-CN',
+  'https://picsum.photos/1920/1080',
+  `${import.meta.env.BASE_URL}image/bgi.jpg`
+]
+const sourceIndex = ref(0)
 const dailyImage = ref('')
 
+function handleImageError() {
+  sourceIndex.value += 1
+  dailyImage.value = dailySources[sourceIndex.value] || ''
+}
+
 onMounted(() => {
-  // 使用 Bing 每日壁纸
-  dailyImage.value = 'https://bing.img.run/1920x1080.php'
+  // 使用 Bing 每日壁纸（带多级兜底）
+  dailyImage.value = dailySources[0]
 })
 </script>
 
